@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "titulo": "Inception",
+        "duracion": "148 minutos",
+        "sinopsis": "Un ladrón que roba secretos corporativos a través del uso de la tecnología de los sueños es ofrecido la oportunidad de borrar su pasado delictivo.",
+        "imagen_ruta": "/images/inception.webp"
+    },
+    {
+        "id": 2,
+        "titulo": "Breaking Bad",
+        "duracion": "47 minutos por episodio",
+        "sinopsis": "Un profesor de química se convierte en fabricante de metanfetaminas tras ser diagnosticado con cáncer.",
+        "imagen_ruta": "/images/breakingBad.webp"
+    },
+    {
+        "id": 3,
+        "titulo": "The Shawshank Redemption",
+        "duracion": "142 minutos",
+        "sinopsis": "Un banquero es condenado a cadena perpetua en una prisión de máxima seguridad y forja una amistad con otro prisionero.",
+        "imagen_ruta": "/images/theShawshankRedemption.webp"
+    },
+    {
+        "id": 4,
+        "titulo": "Stranger Things",
+        "duracion": "50 minutos por episodio",
+        "sinopsis": "Un grupo de niños se enfrenta a fenómenos sobrenaturales en su pequeña ciudad mientras buscan a su amigo desaparecido.",
+        "imagen_ruta": "/images/strangerThings.webp"
+    },
+    {
+        "id": 5,
+        "titulo": "The Godfather",
+        "duracion": "175 minutos",
+        "sinopsis": "La historia de la familia mafiosa Corleone y su patriarca, Vito Corleone, mientras navegan por el mundo del crimen organizado.",
+        "imagen_ruta": "/images/theGodfather.webp"
+    },
+    {
+        "id": 6,
+        "titulo": "Game of Thrones",
+        "duracion": "57 minutos por episodio",
+        "sinopsis": "Nobles familias luchan por el control del Trono de Hierro en un mundo de fantasía lleno de intrigas y traiciones.",
+        "imagen_ruta": "/images/gameOfThrones.webp"
+    },
+    {
+        "id": 7,
+        "titulo": "The Dark Knight",
+        "duracion": "152 minutos",
+        "sinopsis": "Batman debe enfrentarse al Joker, un criminal que busca sumergir a Gotham en el caos.",
+        "imagen_ruta": "/images/theDarkKnight.webp"
+    },
+    {
+        "id": 8,
+        "titulo": "The Crown",
+        "duracion": "58 minutos por episodio",
+        "sinopsis": "La historia de la reina Isabel II y los eventos que han moldeado la segunda mitad del siglo XX en el Reino Unido.",
+        "imagen_ruta": "/images/theCrown.webp"
+    },
+    {
+        "id": 9,
+        "titulo": "Pulp Fiction",
+        "duracion": "154 minutos",
+        "sinopsis": "Una serie de historias entrelazadas que exploran el mundo del crimen en Los Ángeles.",
+        "imagen_ruta": "/images/pulpFiction.webp"
+    },
+    {
+        "id": 10,
+        "titulo": "The Mandalorian",
+        "duracion": "30 minutos por episodio",
+        "sinopsis": "Un cazarrecompensas solitario navega por los confines de la galaxia, lejos de la autoridad de la Nueva República.",
+        "imagen_ruta": "/images/TheMandalorian.webp"
+    },
+    {
+        "id": 11,
+        "titulo": "The White Lotus",
+        "duracion": "50 minutos por episodio",
+        "sinopsis": "Un vistazo a las andanzas de diferentes empleados y huéspedes de un exclusivo resort a lo largo de una trágica semana.",
+        "imagen_ruta": "/images/theWhiteLotus.webp"
+    },
+    {
+        "id": 12,
+        "titulo": "Envidiosa",
+        "duracion": "40 minutos por episodio",
+        "sinopsis": "Después de una ruptura muy dolorosa, Vicky, con cerca de 40 años, busca un nuevo amor. No sabe que lo que la espera es un profundo —y divertido— proceso de autodescubrimiento.",
+        "imagen_ruta": "/images/envidiosa.webp"
+    },
+    {
+        "id": 13,
+        "titulo": "Relatos salvajes",
+        "duracion": "122 minutos",
+        "sinopsis": "Seis relatos que alternan la intriga, la comedia y la violencia.",
+        "imagen_ruta": "/images/relatosSalvajes.webp"
+    }
+
+]

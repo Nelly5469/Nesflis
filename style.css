@@ -27,3 +27,8 @@ body{
 .nav-bar{
     background-color: #3E2259;
 }
+
+.list-content{
+    display: flex;
+    flex-direction: row;
+}
