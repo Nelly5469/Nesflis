@@ -1,4 +1,5 @@
 const pathCatalogue = './resources/peliculas_series.json';
+const currentLocation = '.';
 let catalogue;
 let recomendations;
 
@@ -6,9 +7,61 @@ function authenticateLogin(){
     window.location.href = 'mainPage.html';
 }
 
+function createDetailedView(element){
+    const container = document.getElementById('details-cont');
+    //create
+    const subCont = document.createElement("div");
+    const textCont = document.createElement("div");
+    const img = document.createElement("img");
+    const title = document.createElement("h2");
+    const duration = document.createElement("p");
+    const synopsis = document.createElement("p");
+    //set
+    img.setAttribute("src",currentLocation+element.imagen_ruta);
+    img.setAttribute("alt",element.titulo);
+    title.innerText = element.titulo;
+    duration.innerText = element.duration;
+    synopsis.innerText = element.synopsis;
+    //append
+    textCont.appendChild(title);
+    textCont.appendChild(duration);
+    textCont.appendChild(synopsis);
+    subCont.appendChild(textCont);
+    subCont.appendChild(img);
+    container.appendChild(subCont);
+    return container;
+}
+
+function findContentById(id){
+    const content = catalogue.find(element => element.id === id);
+    if(content){
+        console.log("Contenido encontrado");
+        return content;
+    }
+    else{
+        console.log("Contenido no encontrado");
+        return false;
+    }
+}
+
+function displayDetailedView(idContent){
+    window.location.href = 'detailedView.html'; //NOTA: DESPUES DE ESTA LINEA LO DEMAS NO SE EJECUTA
+    const content = findContentById(idContent);
+    if(content){
+        return createDetailedView(content);
+    }
+    else{
+        const container = document.getElementById('details-cont');
+        const subcont = createElement("p");
+        subcont.innerText = "No fue posible cargar el detalle";
+        container.appendChild(subcont);
+        return container;
+    }
+    
+}
+
 function getCatalogue(){
     let contenedor = document.getElementById("recomendaciones-cont");
-    const location = '.';
     let card, img, cardBody, title;
     for(element of catalogue){
         //create sub-elements
@@ -19,8 +72,9 @@ function getCatalogue(){
         //set attributes
         card.setAttribute("class", "card");
         card.setAttribute("style","width: 18rem;");
+        card.setAttribute("onclick","displayDetailedView("+element.id+")");
         console.log(element.imagen_ruta);
-        img.setAttribute("src", location + element.imagen_ruta);
+        img.setAttribute("src", currentLocation + element.imagen_ruta);
         img.setAttribute("class","card-img-top");
         img.setAttribute("alt",element.titulo);
         cardBody.setAttribute("class","card-body");
