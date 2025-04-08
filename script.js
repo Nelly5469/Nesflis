@@ -33,7 +33,9 @@ function createDetailedView(element){
 }
 
 function findContentById(id){
-    const content = catalogue.find(element => element.id === id);
+    console.log("catalogo desde findContentById ");
+    console.log(catalogue);
+    const content = catalogue.find(element => element.id.toString() === id);
     if(content){
         console.log("Contenido encontrado");
         return content;
@@ -44,20 +46,32 @@ function findContentById(id){
     }
 }
 
-function displayDetailedView(idContent){
-    window.location.href = 'detailedView.html'; //NOTA: DESPUES DE ESTA LINEA LO DEMAS NO SE EJECUTA
+function getIdFromUrl(){
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id'); // Devuelve el valor del parámetro 'id'
+}
+
+function displayDetailedView(){
+    //window.location.href = 'detailedView.html'; //NOTA: DESPUES DE ESTA LINEA LO DEMAS NO SE EJECUTA
+    const idContent = getIdFromUrl();
+    console.log('id: '+ idContent);
     const content = findContentById(idContent);
+    console.log('Contenido encontrado:', content); // Agregado para depuración
     if(content){
         return createDetailedView(content);
     }
     else{
         const container = document.getElementById('details-cont');
-        const subcont = createElement("p");
+        const subcont = document.createElement("p");
         subcont.innerText = "No fue posible cargar el detalle";
         container.appendChild(subcont);
         return container;
     }
     
+}
+
+function goDetailedView(id){
+    window.location.href = `detailedView.html?id=${id}`;
 }
 
 function getCatalogue(){
@@ -72,7 +86,7 @@ function getCatalogue(){
         //set attributes
         card.setAttribute("class", "card");
         card.setAttribute("style","width: 18rem;");
-        card.setAttribute("onclick","displayDetailedView("+element.id+")");
+        card.setAttribute("onclick","goDetailedView("+element.id+")");
         console.log(element.imagen_ruta);
         img.setAttribute("src", currentLocation + element.imagen_ruta);
         img.setAttribute("class","card-img-top");
@@ -90,6 +104,7 @@ function getCatalogue(){
 
 //leer catalogo
 function loadCatalogue(){
+    console.log('Cargando catálogo...'); // Agregado para depuración
     fetch(pathCatalogue)
     .then(res => {
         if (!res.ok) {
@@ -100,10 +115,14 @@ function loadCatalogue(){
     .then((output) => {
         console.log('Contenido del catálogo cargado:', output); // [DEB]
         catalogue = output;
-        getCatalogue();
-        //console.log(catalogue);
-        //let element = document.getElementById('recomendaciones');
-        //element.textContent = JSON.stringify(catalogue, null, 2); // Mostrar el contenido en la página
+        console.log(catalogue);
+        if(window.location.pathname === '/mainPage.html'){
+            getCatalogue();
+        }
+        else if(window.location.pathname === '/detailedView.html'){
+            console.log('se manda a /detailedView.html')
+            displayDetailedView();
+        }
     })
     .catch((error) => {
         console.error('Error al cargar el catálogo:', error);
