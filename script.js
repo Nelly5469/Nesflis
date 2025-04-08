@@ -7,28 +7,51 @@ function authenticateLogin(){
     window.location.href = 'mainPage.html';
 }
 
-function createDetailedView(element){
+function createDetailedView(element) {
     const container = document.getElementById('details-cont');
-    //create
-    const subCont = document.createElement("div");
+    container.style.position = "relative"; // Asegura que los elementos hijos se posicionen relativos al contenedor
+
+    // Crear elementos
     const textCont = document.createElement("div");
     const img = document.createElement("img");
     const title = document.createElement("h2");
     const duration = document.createElement("p");
     const synopsis = document.createElement("p");
-    //set
-    img.setAttribute("src",currentLocation+element.imagen_ruta);
-    img.setAttribute("alt",element.titulo);
+    const watchNow = document.createElement("button");
+
+    // Establecer atributos y contenido
+    img.setAttribute("src", currentLocation + element.imagen_ruta);
+    img.setAttribute("alt", element.titulo);
+    img.style.width = "100%"; // Imagen ocupa todo el ancho de la pantalla
+    img.style.height = "100vh"; // Imagen ocupa toda la altura de la pantalla
+    img.style.objectFit = "cover"; // Ajusta la imagen para cubrir el área sin deformarse
+
+    textCont.style.position = "absolute"; // Posiciona el texto encima de la imagen
+    textCont.style.top = "10%"; // Ajusta la posición vertical
+    textCont.style.left = "5%"; // Ajusta la posición horizontal
+    textCont.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Fondo semitransparente
+    textCont.style.color = "white"; // Texto blanco
+    textCont.style.padding = "20px"; // Espaciado interno
+    textCont.style.borderRadius = "10px"; // Bordes redondeados
+    textCont.style.zIndex = "2"; // Asegura que el texto esté encima de la imagen
+
     title.innerText = element.titulo;
-    duration.innerText = element.duracion;
+    duration.innerText = `Duración: ${element.duracion}`;
     synopsis.innerText = element.sinopsis;
-    //append
+
+    watchNow.innerText = 'Watch now';
+    watchNow.setAttribute("class", "btn btn-primary btn-form");
+
+    // Agregar elementos al contenedor de texto
     textCont.appendChild(title);
     textCont.appendChild(duration);
     textCont.appendChild(synopsis);
-    subCont.appendChild(textCont);
-    subCont.appendChild(img);
-    container.appendChild(subCont);
+    textCont.appendChild(watchNow);
+
+    // Agregar elementos al contenedor principal
+    container.appendChild(img);
+    container.appendChild(textCont);
+
     return container;
 }
 

@@ -2,12 +2,14 @@
 ## Description
 Streaming platform made with html, vanilla js and css
 ## Screenshots
-![Login](./readme_sources/login.jpg)
 User login
-![Main Page](./readme_sources/mainPage.jpg)
+![Login](./readme_sources/login.jpg)
 Main Page
-![Catalogue](./readme_sources/catalogue.jpg)
+![Main Page](./readme_sources/mainPage.jpg)
 Catalogue of movies and series
+![Catalogue](./readme_sources/catalogue.jpg)
+Detailed View of the movie or series selected
+![Detailed View](./readme_sources/detailedView.jpg)
 ## Mockup
 ![Mockup](./readme_sources/mockup.jpg)
 ## Instrucciones
@@ -21,11 +23,10 @@ Catalogue of movies and series
 4. Creé mainPage.html y realicé lo mismo que con index.html.
 5. Descargué imágenes representativas del contenido y creé un json para almacenar los detalles de cada pelicula y serie.
 6. En script.js, realicé la lectura del json y presenté algunos detalles en mainPage.html.
+7. Procedí a crear la estructura de detailedView.html
 ## Problemas conocidos
 * No es necesario escribir el correo y contraseña para iniciar sesión.
-* No funcionan los elementos de la barra de navegación.
 * La lista de "Más recomendaciones" "amontona los contenidos".
-* Al hacer clic a algún título en "Más recomendaciones" debería de llevar a una vista detallada del título pero aún no lo hace.
 ## Retrospectiva
 | Que salio bien? | Que puedo hacer diferente? | Que no salio bien ? |
 ------------------|----------------------------|-----------------------
