@@ -2,14 +2,20 @@
 ## Description
 Streaming platform made with html, vanilla js and css
 ## Screenshots
-User login
+### User login
 ![Login](./readme_sources/login.jpg)
-Main Page
+Se ingresa el correo (cualquiera) y la contraseña (cualquiera) en los campos requeridos
+### Main Page
 ![Main Page](./readme_sources/mainPage.jpg)
-Catalogue of movies and series
+Se muestra la barra de navegacion y un carrousel con las recomendaciones de contenido
+### Catalogue of movies and series
 ![Catalogue](./readme_sources/catalogue.jpg)
-Detailed View of the movie or series selected
+Apartado con el catalogo de contenido disponible sacado de peliculas_series.json
+![Catalogue 2](./readme_sources/catalogue2.jpg)
+Cuando se selecciona un contenido, el elemento cambia de color para identificarlo
+### Detailed View of the movie or series selected
 ![Detailed View](./readme_sources/detailedView.jpg)
+Se observa además del título, la duración y sinopsis
 ## Mockup
 ![Mockup](./readme_sources/mockup.jpg)
 ## Instrucciones
@@ -26,7 +32,9 @@ Detailed View of the movie or series selected
 7. Procedí a crear la estructura de detailedView.html
 ## Problemas conocidos
 * No es necesario escribir el correo y contraseña para iniciar sesión.
-* La lista de "Más recomendaciones" "amontona los contenidos".
+* El boton de "watch now" no hace nada.
+* Si se despliega otro archivo html que no sea el index, es probable que las peliculas y series no se desplieguen.
+* El carrousel no cuenta con elementos seleccionables.
 ## Retrospectiva
 | Que salio bien? | Que puedo hacer diferente? | Que no salio bien ? |
 ------------------|----------------------------|-----------------------

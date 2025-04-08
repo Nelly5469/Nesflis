@@ -29,10 +29,27 @@ body{
 }
 
 .nav-bar{
+    display: flex;
+    justify-content: space-between;
     background-color: #3E2259;
 }
 
-.list-content{
-    display: flex;
-    flex-direction: row;
+.list-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    gap: 1rem; /* Espaciado entre los elementos */
+}
+
+@media (max-width: 768px) { /* Para pantallas pequeñas (celulares) */
+    .list-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+.card{
+    background-color: #B682D9;
+}
+
+.card:hover{
+    background-color: #D94A4A;
 }
