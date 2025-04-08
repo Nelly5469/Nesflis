@@ -20,8 +20,8 @@ function createDetailedView(element){
     img.setAttribute("src",currentLocation+element.imagen_ruta);
     img.setAttribute("alt",element.titulo);
     title.innerText = element.titulo;
-    duration.innerText = element.duration;
-    synopsis.innerText = element.synopsis;
+    duration.innerText = element.duracion;
+    synopsis.innerText = element.sinopsis;
     //append
     textCont.appendChild(title);
     textCont.appendChild(duration);
